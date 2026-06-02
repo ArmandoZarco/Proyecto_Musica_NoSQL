@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Music App Pro</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header>
+  <h1>🎵 Music App Pro</h1>
+</header>
+
+<main class="layout">
+
+  <!-- FORMULARIO -->
+  <section class="panel">
+    <h2>Agregar canción</h2>
+
+    <input id="nombre" placeholder="Canción">
+    <input id="artista" placeholder="Artista">
+
+    <select id="genero">
+      <option>Pop</option>
+      <option>Rock</option>
+      <option>Reggaeton</option>
+      <option>Electrónica</option>
+      <option>Hip Hop</option>
+      <option>Trap</option>
+      <option>R&B</option>
+      <option>Lo-fi</option>
+      <option>Indie</option>
+      <option>Jazz</option>
+      <option>Blues</option>
+      <option>Salsa</option>
+      <option>Bachata</option>
+      <option>Cumbia</option>
+      <option>Regional Mexicano</option>
+      <option>EDM</option>
+      <option>Otro</option>
+    </select>
+
+    <input id="album" placeholder="Álbum">
+    <input id="imagen" placeholder="Imagen URL">
+    <input id="url" placeholder="Link YouTube / Spotify">
+
+    <button id="btn-guardar">Guardar</button>
+  </section>
+
+  <!-- BUSCADOR -->
+  <section class="panel">
+    <h2>Buscar</h2>
+
+    <input id="busqueda" placeholder="Buscar...">
+
+    <div class="row">
+      <button id="btn-buscar">Buscar</button>
+      <button id="btn-limpiar">Limpiar</button>
+    </div>
+  </section>
+
+  <!-- GRÁFICA -->
+  <section class="panel">
+    <h2>🎧 Canciones más escuchadas</h2>
+    <canvas id="grafica"></canvas>
+  </section>
+
+  <!-- BOTÓN -->
+  <div class="center">
+    <button id="btn-accion">Actualizar</button>
+  </div>
+
+  <!-- LISTA -->
+  <section id="contenedor-datos"></section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
