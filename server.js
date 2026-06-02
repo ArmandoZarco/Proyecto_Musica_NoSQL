@@ -54,7 +54,21 @@ app.get("/datos", async (req, res) => {
   const canciones = await Cancion.find();
   res.json(canciones);
 });
+/ BUSCAR */
+app.get("/buscar/:termino", async (req, res) => {
+  const termino = req.params.termino;
 
+  const canciones = await Cancion.find({
+    $or: [
+      { nombre: { $regex: termino, $options: "i" } },
+      { artista: { $regex: termino, $options: "i" } },
+      { genero: { $regex: termino, $options: "i" } },
+      { album: { $regex: termino, $options: "i" } }
+    ]
+  });
+
+  res.json(canciones);
+});
 /* ELIMINAR */
 app.delete("/eliminar/:id", async (req, res) => {
   await Cancion.findByIdAndDelete(req.params.id);
