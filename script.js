@@ -1,4 +1,4 @@
-const API = "http://localhost:3000";
+const API = window.location.origin;
 
 const contenedor = document.getElementById("contenedor-datos");
 const busqueda = document.getElementById("busqueda");
